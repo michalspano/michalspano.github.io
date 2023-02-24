@@ -3,8 +3,6 @@ layout: post
 title: "The tricky 'finally' statement"
 ---
 
-<!-- ^pandoc header; written in enriched markdown -->
-
 Here are four examples, where the `finally` statement is _tricky_. Generally speaking, one should __avoid__ using the `return` statement and throwing an `Exception` in the `finally` block - these are just some __illustrative examples__.
 
 ### Example 1
