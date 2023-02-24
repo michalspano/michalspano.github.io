@@ -20,7 +20,7 @@ highlighter: rouge
 markdown: kramdown
 
 # Google Analytics
-analytics: G-SLSCKQEVW0
+analytics: G-R0D6FNJLTB
 
 # optimization -> compress.html
 compress_html:
