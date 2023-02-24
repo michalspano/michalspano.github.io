@@ -19,8 +19,8 @@ github:   "michalspano"
 highlighter: rouge
 markdown: kramdown
 
-# Tracker [TODO]
-analytics:
+# Google Analytics
+analytics: G-SLSCKQEVW0
 
 # optimization -> compress.html
 compress_html:
