@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dotfiles
+title: ~/.dotfiles
 description: dotfiles, scripts, LaTeX template [macos]
 tags: dotfiles, scripts, LaTeX, macOS, bash, zsh, vim, tmux, git
 ---
