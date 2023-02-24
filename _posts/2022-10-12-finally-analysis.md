@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The tricky `finally` statement"
+title: "The tricky 'finally' statement"
 ---
 
 <!-- ^pandoc header; written in enriched markdown -->
@@ -60,7 +60,6 @@ public static void d() {
 ```
 ___
 
-\pagebreak
 
 Lastly, inside the `main` method, we can call the above methods:
 
