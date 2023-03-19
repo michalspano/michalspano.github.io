@@ -6,7 +6,7 @@ tags: Hackathon, Frances, Sweden, Software Engineering, ITatGU
 
 \#ActInSpace **Hackathon International Finals** in Cannes, France \#ITatGU &#128640; 
 
-~ Ionel Pop; Mariia Zabolotnia; Agrima Singh
+w/ Ionel Pop; Mariia Zabolotnia; Agrima Singh
 
 Having won the **National Round in Sweden**, I and my classmates recently competed in the International Finals of the ActInSpace Hackathon. &#127480;&#127466;
 
@@ -16,4 +16,15 @@ Additionally, I'd like to congratulate the Grand Prize-winning team from Azerbai
 
 To summarize, this has been a fantastic experience, and I'm looking forward to participating in similar upcoming events!
 
+For a further read, please visit the following [link](https://www.home.sandvik/en/stories/articles/2023/03/waste-collecting-robot-at-hackathon/).
+
+<h2 align="center">Team Picture</h2>
+
 ![Team picture](https://media.licdn.com/dms/image/C4E22AQEBjYIoplNtng/feedshare-shrink_2048_1536/0/1677332371151?e=1680134400&v=beta&t=VWvUp3pfyfjMbkgiC7GH2_cuCc0OvfeMTUlTRYwdVr4)
+
+<h2 align="center">Video of the Event</h2>
+
+<p align="center">Video courtesy of <a href="https://www.home.sandvik/en/"><b>Sandvik</b></a>, Sweden.</p>
+
+<!-- HTML embed of the video -->
+<div align="center" data-gobrain-widgetId="player" data-gobrain-language="en" data-gobrain-autoplay="false" data-gobrain-width="640" data-gobrain-height="360" data-gobrain-config="//video.qbrick.com/play2/api/v1/accounts/1339090/configurations/qbrick-player" data-gobrain-moduleSettings="{&quot;Controls&quot;:{&quot;timeFrom&quot;:0,&quot;timeTo&quot;:48.16}}" data-gobrain-data="//video.qbrick.com/api/v1/public/accounts/1339090/medias/594b92db-b219-451d-b2d4-9d5ec0a08678"></div><script src="//play2.qbrick.com/qbrick-player/framework/GoBrain.min.js"></script>
