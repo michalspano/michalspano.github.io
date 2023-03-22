@@ -10,7 +10,7 @@ tags: Michal Spano, Chalmers, Gothenburg, Sweden, Software Engineering, Software
 
 Hello there, my name is **Michal Spano**! &#128075;
 
-I'm a passionate Software/Website Developer and Data Analyst from Slovakia, currently based in Sweden’s Gothenburg – a Student of **Software Engineering and Management** at **Gothenburg University/Chalmers University of Technology**.
+I'm a passionate Software/Website Developer and Data Analyst from Slovakia, currently based in Sweden’s Gothenburg – a Student of **Software Engineering and Management** at **Gothenburg University/Chalmers University of Technology**. Currently, my position is **IT Consultant** at [**CTK**](https://www.ctk.se/){:target="_blank"}.
 
 > _"I'm not a great programmer; I'm just a good programmer with great habits."_ – Kent Beck.
 
