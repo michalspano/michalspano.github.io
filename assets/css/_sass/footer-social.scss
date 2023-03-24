@@ -90,7 +90,7 @@
 .rounded-social-buttons .social-button.email:hover, .rounded-social-buttons .social-button.email:focus {
   color: #60c17d;
   background: #fefefe;
-  border-color: #000000;
+  border-color: #60c17d;
 }
 
 .rounded-social-buttons .social-button.orcid {
@@ -146,4 +146,14 @@
   color: #f48024;
   background: #fefefe;
   border-color: #5dd1b0;
+}
+
+.rounded-social-buttons .social-button.flickr {
+  background: #f48024;
+}
+
+.rounded-social-buttons .social-button.flickr:hover, .rounded-social-buttons .social-button.flickr:focus {
+  color: #f48024;
+  background: #fefefe;
+  border-color: #f48024;
 }

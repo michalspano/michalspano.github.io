@@ -17,15 +17,6 @@ target="_blank">
 </a>
 {%- endif -%}
 
-{%- if site.github -%}
-<a title="{{ _locale_string_follow | replace: '[NAME]', 'GitHub' }}"
-class="social-button github"
-href="https://www.github.com/{{ site.github }}" itemprop="sameAs"
-target="_blank">
-<i class="fab fa-github"></i>
-</a>
-{%- endif -%}
-
 {%- if site.researchgate -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'ResearchGate' }}"
 class="social-button researchgate"
@@ -50,6 +41,24 @@ class="social-button twitter"
 href="https://www.twitter.com/{{ site.twitter }}" itemprop="sameAs"
 target="_blank">
 <i class="fab fa-twitter"></i>
+</a>
+{%- endif -%}
+
+{%- if site.flickr -%}
+<a title="{{ _locale_string_follow | replace: '[NAME]', 'Flickr' }}" 
+class="social-button flickr" itemprop="sameAs"
+href="https://www.flickr.com/people/{{ site.flickr }}"
+target="_blank">
+<i class="fab fa-flickr"></i>
+</a>
+{%- endif -%}
+
+{%- if site.github -%}
+<a title="{{ _locale_string_follow | replace: '[NAME]', 'GitHub' }}"
+class="social-button github"
+href="https://www.github.com/{{ site.github }}" itemprop="sameAs"
+target="_blank">
+<i class="fab fa-github"></i>
 </a>
 {%- endif -%}
 

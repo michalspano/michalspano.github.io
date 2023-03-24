@@ -14,6 +14,7 @@ paginate_path: /blog/page:num/
 twitter:  "michalspano"
 linkedin: "michalspano"
 github:   "michalspano"
+flickr:   "197352203@N08"
 
 # Markdown
 highlighter: rouge
