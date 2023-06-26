@@ -1,6 +1,6 @@
 ---
 layout: post
 title: Computer Science
-description: CompSci - a personal dump of what I know about it. 
+description: CompSci—a personal dump of resources.
 redirect: https://michalspano.com/Computer-Science/
 ---
