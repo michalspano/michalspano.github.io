@@ -42,9 +42,11 @@ collections:
     order:
       - terminarium.md
       - dotfiles.md
-      - openweathermaps.md
       - compsci.md
+      - openweathermaps.md
+      - wlpr.md
       - swedish-bot.md
+      - dayssince.md
 
 sass:
   sass_dir: /assets/css/_sass
