@@ -40,10 +40,11 @@ collections:
     output: true
     permalink: /projects/:name/
     order:
-      - dotfiles
-      - compsci
-      - swedish-bot
-      - terminarium
+      - terminarium.md
+      - dotfiles.md
+      - openweathermaps.md
+      - compsci.md
+      - swedish-bot.md
 
 sass:
   sass_dir: /assets/css/_sass
