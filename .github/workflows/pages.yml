@@ -1,9 +1,13 @@
-name: Jekyll Deploy
+# Adapted from: https://github.com/joshlarsen/jekyll4-deploy-gh-pages
+# For https://michalspano.com
 
+name: Jekyll-based Website Deployment
+
+# Evaluate when to invoke the job
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build_and_deploy:
@@ -21,6 +25,7 @@ jobs:
       - name: Build & Deploy to GitHub Pages
         uses: joshlarsen/jekyll4-deploy-gh-pages@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          # Secrets
+          GITHUB_TOKEN:       ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY:  ${{ secrets.GITHUB_REPOSITORY }}
+          GITHUB_ACTOR:       ${{ secrets.GITHUB_ACTOR }}
