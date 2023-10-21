@@ -5,12 +5,12 @@ profile:
   align: right
   image: profile.png
 published: true
-tags: Michal Spano, Chalmers, Gothenburg, Sweden, Software Engineering, Software Developer, Data Analyst
+tags: Michal Spano, Chalmers, Gothenburg, Sweden, Software Engineering, Software Developer, Functional Programming, Category Theory
 ---
 
 Hello there, my name is **Michal Spano**! &#128075;
 
-I'm a passionate Software/Website Developer and Data Analyst from Slovakia, currently based in Sweden’s Gothenburg – a Student of **Software Engineering and Management** at **Gothenburg University/Chalmers University of Technology**. Currently, my position is **IT Consultant** at [**CTK**](https://www.ctk.se/){:target="_blank"}.
+I'm a passionate Software Engineer and Mathematics enthusiast from Slovakia, currently based in Sweden’s Gothenburg – a Student of **Software Engineering** at the joint department of Computer Science and Engineering at **Chalmers and Gothenburg University**. My current interest is in **Functional Programming** and **Category Theory**.
 
 > _"I'm not a great programmer; I'm just a good programmer with great habits."_ – Kent Beck.
 
