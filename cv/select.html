@@ -135,7 +135,7 @@
                           const lang = newRows[0].selected;
                           const type = newRows[1].selected;
                           if (lang !== 'sk') {
-                            window.location.href = `public/cv-${lang}.${type}`;
+                            window.location.href = `public/${lang}.${type}`;
                           } else {
                             console.log('TODO: add support for Slovak.');
                           }
