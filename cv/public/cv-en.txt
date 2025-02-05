@@ -1,0 +1,88 @@
+ spano@michalspano.com
+ 
+ Gothenburg, Sweden
+
+ github.com/michalspano
+ linkedin.com/in/michalspano
+ www.michalspano.com
+
+[image]
+
+------------------------------------------------------------------------
+
+I am a passionate software engineer & mathematics enthusiast based in Sweden’s Gothenburg, currently studying Software Engineering, B.Sc. at the joint department of Computer Science and Engineering, Chalmers and Gothenburg University. My current interests include functional programming, cloud computing, and abstract algebra & topology, hence bridging the gap between theoretical Computer Science, Software Engineering, and Mathematics. I also share passion for teaching and have been privately tutoring students since 2021.
+
+Education
+
+B.Sc. in Software Engineering 2022-Present
+Chalmers and Gothenburg University Gothenburg, Sweden
+
+Free-standing Courses 2022-2024
+Lund, Linnaeus, and Gothenburg Universities Sweden
+
+High School Diploma 2017-2022
+Private English Grammar School Bratislava, Slovakia
+
+Work Experience
+
+Developer 2024-Present
+Algeno AB Gothenburg, Sweden
+
+Focusing on developing AI-driven tools to optimize energy use and temperature control in homes and workplaces. | Technologies used: Next.js, TypeScript, Python, SQL, Docker
+
+Research Assistant 2024
+Chalmers University of Technology Gothenburg, Sweden
+
+Contributed to a research project investigating teaching approaches and pedagogical methodologies for computer programming education. | Focused on analyzing the impact of AI-aided tools and platforms supporting social annotations (e.g., www.perusall.com) on learning experiences in higher education. | Technologies used: Python (Numpy & Pandas), R, LaTeX, Haskell
+
+IT Consultant & Developer 2023
+Chalmers Teknologkonsulter AB Gothenburg, Sweden
+
+Consultancy in IT sector, sales, participation in various projects with current industry partners. | Project Manager responsible for the development of a mobile-based application (React Native) for the Regional Cancer Center (Sweden) aimed to help detect melanoma.
+
+Teaching Assistant 2023-Present
+Chalmers and Gothenburg University Gothenburg, Sweden
+
+My role revolves around grading coursework, offering individualized guidance to students, assisting with administrative tasks, and contributing to curriculum discussions. | Courses I’ve been involved in: Object-Oriented Programming, Embedded Systems and C Programming, Systems Development, Requirements Engineering.
+
+Fullstack Developer 2021-2023
+Klas, s.r.o. Bratislava, Slovakia
+
+Participated in the website development (and the platform’s UI/UX design) featuring contemporary visuals: www.klasfarm.sk. | Technologies used: Next.js, JavaScript, Tailwind CSS, Shell & Linux administration, Python, Go.
+
+Education Monitor & Board Member 2023-Present
+Göta Student Union Gothenburg, Sweden
+
+Engaged in various aspects of education of the Faculty of Science and Technology (previously, IT faculty) and represented students in decision-making bodies. | Chairman (2023-2024), Head of Finance (2024-2025) of SKIP Student Association, under Göta Student Union. | Spearheaded the planning of events including Hackathons, seminars, and guest lectures with industry partners and alumni.
+
+Technical Skills
+
+Programming Languages: Python, Haskell, Java, TypeScript, Go, C/C++, Assembly, Bash/Shell, R, MATLAB | Tools: Pandas, NumPy & SciPy, Jupyter Notebook, Matplotlib, QuickCheck, Vue.js, Next.js, React (Native), Docker, MongoDB, SQL, CLI/Unix, LaTeX, Git (GitHub/GitLab), Arduino | Other: Open-source software, academic writing, Adobe After Effects & Photoshop, Figma, Affinity Photo, video editing, graphic and motion design
+
+Language Proficiency
+
+  Language        Level
+  --------------- --------
+  Slovak, Czech   Native
+  English         Native
+  Swedish         C1
+  German          B2
+  Spanish         B1
+
+Projects
+
+AppointDent 2024
+
+AppointDent is a website-based application using a microservices architecture aimed to assist Swedish residents manage dentist appointments and provides dentists with tools to organize their schedules efficiently.
+
+MiniCarSteer 2024
+
+A data-driven algorithm to determine the steering angle of a miniature self-driving vehicle using sensor data, implemented in a Docker environment.
+
+CompSci 2023
+
+Awards, Licenses & Certificates
+
+2
+
+Winner of ActInSpace Hackathon (national round), 2022 | TOEFL iBT (Academic English), 2022 | Swedish as Second Language, Folkuniversitet, 2024 | CS50 Introduction to Computer Science, Harvard University, 2021 | Pre-University Calculus, Technische Universiteit Delft, 2022 | The Duke of Edinburgh’s Award (Bronze), Slovakia, 2020
