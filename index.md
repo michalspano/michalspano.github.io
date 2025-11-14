@@ -5,30 +5,27 @@ profile:
   align: right
   image: profile.png
 published: true
-tags: Michal Spano, Chalmers, Gothenburg, Sweden, Software Engineering, Programming, Functional Programming, Open Source
+tags: Michal Spano, Chalmers, Gothenburg, Sweden, Software Engineering, Functional Programming
 ---
 
-Hello there, my name is **Michal Spano**! &#128075;
+I am a passionate Computer Scientist and a (*functional*) programmer born in
+Bratislava (Slovakia), presently based in Sweden's Gothenburg. I'm a student of
+Computer Science (MSc.) @ Chalmers in Sweden. My interests include (but are not
+limited to) linguistics, design, and teaching. At the moment I'm reading loads
+on type theory.
 
-I'm a passionate Software Engineer and Mathematics enthusiast from Slovakia,
-currently based in Sweden's Gothenburg. I'm a Student of **Software
-Engineering BSc.** at the joint department of Computer Science and Engineering
-at **Chalmers and Gothenburg University**, Sweden.
+> _"The most effective debugging tool is still careful thought, coupled with
+> judiciously placed print statements."_ ~ Brian Kernighan
 
-> _"The most effective debugging tool is still careful thought, coupled with judiciously placed print statements."_ - Brian Kernighan
+This website is a personal showcase of (sometimes random) things. I write a
+lot---academic, essays, and much else---some of which may end up here.
 
-This website is my **personal portfolio**, where I showcase my
-projects, skills, and experiences. Similarly, I write about my **journey** as a
-programmer and share my knowledge with others. I also plan to use the website
-to share my thoughts and ideas about the world of technology and software
-development via blog posts.
+Previously, I've edited videos and made various [graphics][behance] and created
+digital [content][youtube]; I'm also learning [photography][flickr] and music
+production at this moment, albeit there's not much to highlight (yet!).
 
-I `<3` **open source** software and [functional &lambda;][fp].
+Follow my socials to get in touch!
 
-Besides, I also enjoy [**computer graphics** \& **video editing**][behance] and
-[photography][flickr]. My other hobbies include reading, music, traveling, and
-taking walks in nature.
-
-[fp]: https://fp.michalspano.com/
 [behance]: https://www.behance.net/michalspano
-[flickr]: https://www.behance.net/michalspano
+[youtube]: https://www.youtube.com/@michalspano
+[flickr]: https://www.flickr.com/people/197352203@N08
