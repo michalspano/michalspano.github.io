@@ -101,8 +101,9 @@ A centred block.
 
 | To change…                                   | Edit                   |
 | -------------------------------------------- | ---------------------- |
-| Colours (light and dark)                     | `css/theme.css`        |
+| Colours (light and dark) and fonts           | `css/theme.css`        |
 | Layout and typography                        | `css/base.css`         |
+| Decorations: grain, contour map, trail, mountains | `css/decor.css`; artwork in `static/assets/decor/` |
 | Code highlighting                            | `css/syntax.css`       |
 | Page structure (HTML)                        | `templates/`           |
 | Title, navigation, social links, analytics   | `src/Site/Config.hs`   |
@@ -112,7 +113,15 @@ A centred block.
 | What gets built from what                    | `src/Site/Rules.hs`    |
 
 Stylesheets are bundled into one minified `/css/main.css`, in the order listed
-in `src/Site/Rules.hs`; add new files there. After editing Haskell code, run
+in `src/Site/Rules.hs`; add new files there.
+
+The look is split into layers. `theme.css` holds every colour and font as a
+token. `base.css` is a complete, plain, readable site on its own.
+`decor.css` adds the cosmetics on top, purely in CSS, so the HTML stays clean
+for reader views, screen readers and print. It is skipped for visitors whose
+OS asks for more contrast, and removing it from the list leaves a working site.
+The SVGs in `static/assets/decor/` are used as masks, so only their shapes
+matter; they take their colours from the theme. After editing Haskell code, run
 `make` or restart `make watch`: both recompile the generator and rebuild from
 scratch.
 
@@ -134,7 +143,7 @@ Available variables: front matter keys under their own names, plus `body`,
 ```
 content/      Markdown: index.md, 404.md, pages/, posts/, projects/
 templates/    HTML templates and partials
-css/          Stylesheets (theme, base, syntax)
+css/          Stylesheets (theme, base, syntax, decor)
 js/           Scripts (dark-mode toggle)
 static/       Copied verbatim to the site root (favicons, CNAME, assets/)
 src/Site/     The generator: Config, Routes, Pandoc, Context, Rules

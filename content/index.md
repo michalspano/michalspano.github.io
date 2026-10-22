@@ -2,12 +2,13 @@
 tags: Michal Spano, Chalmers, Gothenburg, Sweden, Software Engineering, Functional Programming
 ---
 
-![Michal Spano](/assets/images/profile.png){.portrait} I am a passionate
-Computer Scientist and a (*functional*) programmer born in Bratislava
-(Slovakia), presently based in Sweden's Gothenburg. I'm a student of Computer
-Science (MSc.) @ Chalmers in Sweden. My interests include (but are not limited
-to) linguistics, design, and teaching. At the moment I'm reading loads on type
-theory.
+![Michal Spano](/assets/images/profile.jpg){.portrait} I am a passionate
+computer scientist and a (*functional*) programmer born in Bratislava
+(Slovakia) based in Gothenburg (Sweden). I'm a grad. student of CS @ Chalmers.
+My interests include (but are not limited to) linguistics, design, teaching,
+and, obviously, hiking (hence this theme!). At the moment I enjoy typed
+programming and principles from maths for programming, such as category theory
+or dependent types.
 
 > _"The most effective debugging tool is still careful thought, coupled with
 > judiciously placed print statements."_ ~ Brian Kernighan
@@ -15,11 +16,11 @@ theory.
 This website is a personal showcase of (sometimes random) things. I write a
 lot---academic, essays, and much else---some of which may end up here.
 
-Previously, I've edited videos and made various [graphics][behance] and created
-digital [content][youtube]; I'm also learning [photography][flickr] and music
-production at this moment, albeit there's not much to highlight (yet!).
+I used to (and, occasionally, still do) edit videos and various
+[graphics][behance], and created digital [content][youtube]; I'm also learning
+[photography][flickr] and music production at this moment.
 
-Follow my socials to get in touch!
+Follow my socials to get in touch.
 
 [behance]: https://www.behance.net/michalspano
 [youtube]: https://www.youtube.com/@michalspano

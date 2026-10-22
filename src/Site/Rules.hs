@@ -42,7 +42,7 @@ staticFiles = match "static/**" $ do
 -- | The stylesheets, concatenated in this order into one minified
 -- @/css/main.css@. Add new files here.
 stylesheets :: [Identifier]
-stylesheets = ["css/theme.css", "css/base.css", "css/syntax.css"]
+stylesheets = ["css/theme.css", "css/base.css", "css/syntax.css", "css/decor.css"]
 
 stylesheet :: Rules ()
 stylesheet = do

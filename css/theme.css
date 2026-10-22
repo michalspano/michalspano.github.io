@@ -1,28 +1,52 @@
 /*
- * Colour tokens. Every colour on the site is defined here, once, as a
- * light-dark(<light>, <dark>) pair. Which half applies follows the visitor's
- * OS preference, unless they picked one with the toggle (js/theme.js), which
+ * Design tokens. Every colour and font on the site is defined here, once.
+ * Colours are light-dark(<light>, <dark>) pairs: "paper in the morning" and
+ * "the forest at night". Which half applies follows the visitor's OS
+ * preference, unless they picked one with the toggle (js/theme.js), which
  * sets data-theme on <html>.
+ *
+ * Text colours meet WCAG AA (4.5:1) against --bg and --surface. The pastels
+ * are decoration only and never the sole carrier of meaning; their hues are
+ * taken from the Okabe–Ito colour-blind-safe palette.
  */
 
 :root {
   color-scheme: light dark;
 
-  --bg: light-dark(#fdfdfc, #16181d);
-  --fg: light-dark(#1f2328, #d6d9de);
-  --muted: light-dark(#5c636d, #8d949e);
-  --accent: light-dark(#2f5fb3, #82a9e9);
-  --border: light-dark(#e2e4e8, #2d313a);
-  --surface: light-dark(#f3f4f6, #1e2128);
+  /* Type. System fonts only: nothing to download, nothing to license. */
+  --font-body: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, Palatino, Georgia, serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  /* Text and surfaces. */
+  --bg: light-dark(#f4f1e8, #141b19);
+  --fg: light-dark(#1f2a24, #e3decf);
+  --muted: light-dark(#56625b, #a3ab9f);
+  --accent: light-dark(#2a6670, #93cfc0);
+  --border: light-dark(#d8d2c0, #2c3732);
+  --surface: light-dark(#e9e4d6, #1c2522);
+
+  /* Pastels, named after what they are borrowed from. */
+  --moss: light-dark(#bcd5b4, #3f5a45);
+  --lake: light-dark(#b5d3e6, #34505f);
+  --heather: light-dark(#e1c3dc, #5f4862);
+  --blaze: light-dark(#f2ab8c, #e99a7b); /* paint marks on trail-side trees */
+
+  /* Roles the decorations play (see decor.css). */
+  --highlight: light-dark(#c9e0bb, #36503d);
+  --trail: light-dark(#97a598, #5d6e64);
+  --grain: light-dark(rgb(80 66 40 / 0.18), rgb(225 220 200 / 0.07));
+  --topo: light-dark(#d5ccb4, #27342f);
+  --ridge-far: light-dark(#bfd2dc, #3b5361);
+  --ridge-near: light-dark(#86a98d, #2b4a37);
 
   /* Syntax highlighting (see syntax.css). */
-  --code-keyword: light-dark(#a626a4, #c678dd);
-  --code-string: light-dark(#3f8a3e, #98c379);
-  --code-number: light-dark(#986801, #d19a66);
-  --code-comment: light-dark(#80868f, #6f7682);
-  --code-function: light-dark(#3a6fd8, #61afef);
-  --code-type: light-dark(#b07600, #e5c07b);
-  --code-error: light-dark(#d1242f, #f07178);
+  --code-keyword: light-dark(#8a3d7c, #d8aad2);
+  --code-string: light-dark(#2e6b3c, #a9d4a0);
+  --code-number: light-dark(#8a5300, #e6c387);
+  --code-comment: light-dark(#5d645b, #8f988e);
+  --code-function: light-dark(#2b5a85, #9fc6e6);
+  --code-type: light-dark(#7a4a1c, #e2b78f);
+  --code-error: light-dark(#a8322a, #f09a8c);
 }
 
 :root[data-theme="light"] {
