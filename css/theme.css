@@ -1,0 +1,34 @@
+/*
+ * Colour tokens. Every colour on the site is defined here, once, as a
+ * light-dark(<light>, <dark>) pair. Which half applies follows the visitor's
+ * OS preference, unless they picked one with the toggle (js/theme.js), which
+ * sets data-theme on <html>.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  --bg: light-dark(#fdfdfc, #16181d);
+  --fg: light-dark(#1f2328, #d6d9de);
+  --muted: light-dark(#5c636d, #8d949e);
+  --accent: light-dark(#2f5fb3, #82a9e9);
+  --border: light-dark(#e2e4e8, #2d313a);
+  --surface: light-dark(#f3f4f6, #1e2128);
+
+  /* Syntax highlighting (see syntax.css). */
+  --code-keyword: light-dark(#a626a4, #c678dd);
+  --code-string: light-dark(#3f8a3e, #98c379);
+  --code-number: light-dark(#986801, #d19a66);
+  --code-comment: light-dark(#80868f, #6f7682);
+  --code-function: light-dark(#3a6fd8, #61afef);
+  --code-type: light-dark(#b07600, #e5c07b);
+  --code-error: light-dark(#d1242f, #f07178);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}

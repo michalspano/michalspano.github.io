@@ -1,0 +1,9 @@
+<header class="site-header">
+  <a class="site-title" href="/">$site-title$</a>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode" hidden>◐</button>
+  <p class="site-description">$site-description$</p>
+  <nav aria-label="Main">
+    $for(navigation)$<a href="$href$"$if(current)$ aria-current="page"$endif$>$label$</a>
+    $endfor$
+  </nav>
+</header>

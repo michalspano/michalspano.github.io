@@ -1,0 +1,58 @@
+/*
+ * Syntax highlighting for fenced code blocks. Pandoc tags tokens with short
+ * class names (kw = keyword, st = string, …); colours are set in theme.css.
+ */
+
+code span.kw,
+code span.cf,
+code span.im,
+code span.pp {
+  color: var(--code-keyword);
+}
+
+code span.st,
+code span.ch,
+code span.vs,
+code span.ss,
+code span.sc {
+  color: var(--code-string);
+}
+
+code span.dv,
+code span.bn,
+code span.fl,
+code span.cn {
+  color: var(--code-number);
+}
+
+code span.co,
+code span.do,
+code span.an,
+code span.cv,
+code span.in {
+  color: var(--code-comment);
+  font-style: italic;
+}
+
+code span.fu,
+code span.bu {
+  color: var(--code-function);
+}
+
+code span.dt,
+code span.at {
+  color: var(--code-type);
+}
+
+code span.al,
+code span.er,
+code span.wa {
+  color: var(--code-error);
+  font-weight: bold;
+}
+
+/* Pandoc emits an empty anchor per line for deep links; keep them inert. */
+pre.sourceCode a {
+  color: inherit;
+  text-decoration: none;
+}

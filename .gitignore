@@ -1,6 +1,8 @@
+# Build output (see `make clean` / `make distclean`)
 _site/
-.sass-cache/
-.jekyll-metadata
-.jekyll-cache
+_cache/
+dist-newstyle/
+
+# Editors and OS
 .DS_Store
 .vscode/

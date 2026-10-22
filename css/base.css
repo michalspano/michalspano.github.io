@@ -1,0 +1,284 @@
+/* Layout and typography. Colours come from theme.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 112.5%;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Site header ------------------------------------------------------------ */
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.15rem 1rem;
+  margin-bottom: 3rem;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.site-description {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-header nav {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.site-header nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--fg);
+}
+
+.theme-toggle {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--fg);
+}
+
+/* Text ------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 2.25rem 0 0.75rem;
+  line-height: 1.25;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+}
+
+hr {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* Media and embeds ------------------------------------------------------- */
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* Tables ----------------------------------------------------------------- */
+
+table {
+  display: block;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.35rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Code and math ---------------------------------------------------------- */
+
+code,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+}
+
+:not(pre) > code {
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  background: var(--surface);
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+  background: var(--surface);
+  line-height: 1.5;
+}
+
+pre code {
+  font-size: inherit;
+}
+
+/* Long display equations scroll instead of overflowing the page. */
+mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Page parts ------------------------------------------------------------- */
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.meta,
+.lede {
+  margin: 0;
+  color: var(--muted);
+}
+
+.post-footer {
+  margin-top: 3rem;
+}
+
+/* Lists of posts and projects. */
+.entry-list {
+  padding: 0;
+  list-style: none;
+}
+
+.entry-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  padding: 0.35rem 0;
+}
+
+.entry-list time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-description {
+  flex-basis: 100%;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Classes for use in Markdown, e.g. ![…](…){.portrait} or ::: centered */
+
+.portrait {
+  float: right;
+  width: 33%;
+  max-width: 220px;
+  margin: 0.25rem 0 1rem 1.5rem;
+  border-radius: 50%;
+}
+
+.float-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+/* Site footer ------------------------------------------------------------ */
+
+.site-footer {
+  clear: both;
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.site-footer p {
+  margin: 0.5rem 0 0;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+@media (max-width: 480px) {
+  .portrait {
+    width: 40%;
+  }
+}

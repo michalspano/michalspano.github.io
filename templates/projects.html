@@ -1,0 +1,9 @@
+<h1>$title$</h1>
+<ul class="entry-list">
+  $for(projects)$
+  <li>
+    <a href="$href$"$if(link)$ target="_blank" rel="noopener"$endif$>$title$</a>
+    $if(description)$<span class="entry-description">$description$</span>$endif$
+  </li>
+  $endfor$
+</ul>

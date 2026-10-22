@@ -1,0 +1,13 @@
+<!-- Google Analytics; loaded on the production domain only, so local previews are not tracked. -->
+<script>
+  if (location.hostname === new URL("$site-root$").hostname) {
+    const tag = document.createElement("script");
+    tag.async = true;
+    tag.src = "https://www.googletagmanager.com/gtag/js?id=$analytics-id$";
+    document.head.append(tag);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date());
+    gtag("config", "$analytics-id$");
+  }
+</script>
