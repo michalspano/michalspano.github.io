@@ -1,0 +1,11 @@
+<header class="page-header">
+  <h1>$title$</h1>
+</header>
+<ul class="entry-list">
+  $for(posts)$
+  <li>
+    <time datetime="$date-iso$">$date-iso$</time>
+    <a href="$url$">$title$</a>
+  </li>
+  $endfor$
+</ul>

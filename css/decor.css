@@ -1,0 +1,244 @@
+/*
+ * The cosmetic layer: paper grain, a contour map behind the header, the
+ * navigation and post lists drawn as a trail with waypoints, paint marks on
+ * headings, an offset "misprinted" photo and a ridge of mountains and spruces
+ * at the bottom of every page.
+ *
+ * It is pure CSS on top of base.css, so the HTML stays plain: reader views,
+ * screen readers and print see none of it, and nothing here sits on top of
+ * text. Delete this file from `stylesheets` in src/Site/Rules.hs and the site
+ * still works. The artwork in static/assets/decor/ is used as masks: only
+ * its shape matters, its colours come from theme.css.
+ *
+ * Visitors who ask their OS for more contrast get the plain site.
+ */
+
+@media screen and (prefers-contrast: no-preference) {
+  /* Paper ---------------------------------------------------------------- */
+
+  /* The page itself is the paper. What lies beyond it, such as the area a
+     trackpad reveals when overscrolling, shows the root's colour instead:
+     paper above the page and forest floor below it (see the end of this
+     file). `isolation` keeps the layers below in front of the paper. */
+  body {
+    --ridge-height: clamp(5.5rem, 12vw, 10rem);
+
+    isolation: isolate;
+    padding-bottom: calc(var(--ridge-height) - 1rem);
+    background-color: var(--bg);
+  }
+
+  /* Grain, fixed to the window like the paper under a printed page. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--grain);
+    mask: url("/assets/decor/grain.svg");
+    pointer-events: none;
+  }
+
+  /* A contour map behind the header, fading out towards the text. */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    z-index: -1;
+    width: min(100%, 46rem);
+    height: 30rem;
+    background: var(--topo);
+    mask:
+      url("/assets/decor/topo.svg") -10rem -7rem / 60rem auto no-repeat,
+      radial-gradient(farthest-side at 0 0, #000 45%, transparent);
+    mask-composite: intersect;
+    pointer-events: none;
+  }
+
+  /* Mountains and spruces below the footer, the full width of the page, in
+     the room the padding above leaves at the bottom of <body>. */
+  .site-footer::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: var(--ridge-height);
+    background: linear-gradient(var(--ridge-far), var(--ridge-near) 80%);
+    mask: url("/assets/decor/ridges.svg") bottom center / auto 100% repeat-x;
+  }
+
+  .site-footer {
+    border-top: 2px dashed var(--border);
+  }
+
+  /* Misregistered print, as if the title went through a riso twice. */
+  .site-title {
+    text-shadow:
+      0.1em 0.08em 0 var(--heather),
+      -0.06em -0.05em 0 var(--lake);
+  }
+
+  /* The trail ----------------------------------------------------------- */
+
+  /* Waypoints: one per navigation link and per entry in a list. */
+  .site-nav a::before,
+  .entry-list a::before {
+    content: "";
+    flex: none;
+    width: 0.75em;
+    height: 0.75em;
+    border: 2px solid var(--trail);
+    border-radius: 50%;
+    background: var(--bg);
+  }
+
+  .site-nav a:hover::before,
+  .entry-list a:hover::before {
+    border-color: var(--fg);
+  }
+
+  /* You are here. */
+  .site-nav a[aria-current="page"]::before {
+    border-color: var(--fg);
+    background: var(--blaze);
+  }
+
+  /* The dashed path between waypoints, fading in and out at its ends. */
+  .site-nav,
+  .entry-list {
+    --trail-x: 0.375em;
+
+    position: relative;
+  }
+
+  .site-nav a::before {
+    position: relative;
+  }
+
+  .entry-list {
+    --trail-x: 0.45rem;
+
+    padding-left: 2rem;
+  }
+
+  .entry-list::before,
+  .site-nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--trail-x) - 1px);
+    width: 2px;
+    background: repeating-linear-gradient(var(--trail) 0 0.35rem, transparent 0.35rem 0.7rem);
+    mask: linear-gradient(transparent, #000 1.25rem, #000 calc(100% - 1.25rem), transparent);
+  }
+
+  .entry-list a {
+    position: relative;
+  }
+
+  .entry-list a::before {
+    position: absolute;
+    top: 0.3em;
+    left: calc(var(--trail-x) - 2rem - 0.36rem);
+    width: 0.72rem;
+    height: 0.72rem;
+  }
+
+  /* On narrow screens the navigation is a row: waypoints, but no path. */
+  @media (max-width: 65.99em) {
+    .site-nav::before {
+      display: none;
+    }
+  }
+
+  /* Headings ------------------------------------------------------------ */
+
+  /* A highlighter stroke under page titles. */
+  .page-header h1 {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--highlight) 60%, transparent);
+    text-decoration-thickness: 0.2em;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -0.08em;
+  }
+
+  /* A trail blaze, the paint mark on a tree, in front of section headings. */
+  main h2::before {
+    content: "";
+    display: inline-block;
+    width: 0.3em;
+    height: 0.8em;
+    margin-right: 0.5em;
+    border-radius: 2px;
+    background: var(--blaze);
+    vertical-align: -0.04em;
+  }
+
+  /* Photos -------------------------------------------------------------- */
+
+  /* An arched window onto the woods, printed slightly off register. */
+  .portrait {
+    border-radius: 999px 999px 6px 6px;
+    box-shadow: 0.55rem 0.55rem 0 var(--moss);
+    filter: saturate(0.85) contrast(0.96) sepia(0.12);
+  }
+
+  figure img {
+    border-radius: 4px;
+    box-shadow: 0.45rem 0.45rem 0 var(--lake);
+  }
+
+  /* Lines --------------------------------------------------------------- */
+
+  hr {
+    border-top: 2px dashed var(--trail);
+  }
+
+  blockquote {
+    border-left-style: dashed;
+  }
+
+  /* Beyond the page ------------------------------------------------------ */
+
+  /* Overscrolling past the bottom should reveal more forest floor, past
+     the top more paper. Browsers paint both with the root's single
+     background colour, so it follows the scroll position: paper in the top
+     half of the page, forest floor in the bottom half. This is a static
+     colour switch, not a visible animation. Without support for scroll
+     timelines, or on pages too short to scroll, it stays paper.
+
+     Only --forest-floor is animated, never a colour: browsers resolve the
+     light-dark() colours in keyframes once, which would break the toggle. */
+  html {
+    --forest-floor: 0%;
+
+    background-color: color-mix(in srgb, var(--ridge-near) var(--forest-floor), var(--bg));
+  }
+
+  @supports (animation-timeline: scroll()) {
+    html {
+      animation: forest-floor linear both;
+      animation-timeline: scroll(root);
+    }
+  }
+
+  /* Unregistered custom properties animate discretely: one flip, halfway. */
+  @keyframes forest-floor {
+    from {
+      --forest-floor: 0%;
+    }
+
+    to {
+      --forest-floor: 100%;
+    }
+  }
+}
+
+/* Forced-colours modes repaint everything; drop the pictures entirely. */
+@media (forced-colors: active) {
+  body::before,
+  body::after,
+  .site-footer::after {
+    display: none;
+  }
+}

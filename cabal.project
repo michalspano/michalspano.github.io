@@ -1,0 +1,4 @@
+packages: .
+
+-- Exact dependency versions are pinned in cabal.project.freeze
+-- (regenerate with `make freeze`).

@@ -1,0 +1,55 @@
+cabal-version: 3.0
+name:          michalspano-com
+version:       1.0.0
+synopsis:      Static site generator for michalspano.com
+description:   A small Hakyll program that turns the Markdown in @content/@ into
+               the static website served at <https://michalspano.com>.
+homepage:      https://michalspano.com
+license:       MIT
+license-file:  LICENSE
+author:        Michal Spano
+maintainer:    spano@michalspano.com
+category:      Web
+build-type:    Simple
+tested-with:   GHC ==9.6.7
+
+common shared
+  default-language:   GHC2021
+  default-extensions:
+    LambdaCase
+    OverloadedStrings
+
+  ghc-options:
+    -Wall -Wcompat -Widentities -Wincomplete-record-updates
+    -Wincomplete-uni-patterns -Wmissing-export-lists
+    -Wpartial-fields -Wredundant-constraints -Wunused-packages
+
+  build-depends:      base >=4.18 && <5
+
+library
+  import:          shared
+  hs-source-dirs:  src
+  exposed-modules:
+    Site.Config
+    Site.Context
+    Site.Pandoc
+    Site.Routes
+    Site.Rules
+
+  build-depends:
+    , filepath      >=1.4   && <1.6
+    , hakyll        ^>=4.17
+    , pandoc        ^>=3.9
+    , pandoc-types  ^>=1.23
+    , text          >=2.0   && <2.2
+    , time          >=1.12  && <1.15
+
+executable site
+  import:         shared
+  hs-source-dirs: app
+  main-is:        Main.hs
+  ghc-options:    -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+    , hakyll
+    , michalspano-com
+    , time

@@ -1,0 +1,432 @@
+/*
+ * Layout and typography. This file alone gives a complete, readable site;
+ * the cosmetic layer lives in decor.css. Colours and fonts come from theme.css.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 112.5%;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/*
+ * The page grid. Narrow screens stack header, main and footer in one column;
+ * wide screens move the header into a sidebar next to the text.
+ */
+body {
+  --measure: 38rem;
+  --sidebar: 12rem;
+  --gutter: 4rem;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(1rem, 1fr) minmax(0, var(--measure)) minmax(1rem, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    ". header ."
+    ". main ."
+    ". footer .";
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding-top: 2.5rem;
+}
+
+.site-header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  min-width: 0;
+  /* Long URLs wrap instead of widening the page on phones. */
+  overflow-wrap: break-word;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
+@media (min-width: 66em) {
+  body {
+    grid-template-columns:
+      minmax(2rem, 1fr) var(--sidebar) var(--gutter)
+      minmax(0, var(--measure)) minmax(2rem, 1fr);
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      ". header . main ."
+      ". footer footer footer .";
+    padding-top: 4.5rem;
+  }
+
+  .site-header {
+    align-self: start;
+  }
+}
+
+/* Skip link: hidden until focused with the keyboard. */
+.skip-link {
+  position: absolute;
+  top: -10rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.4rem 0.8rem;
+  background: var(--fg);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Site header ------------------------------------------------------------ */
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.35rem 1rem;
+  margin-bottom: 3rem;
+}
+
+.site-title {
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-description {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.site-nav {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.4rem;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--fg);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--fg);
+  font-weight: 700;
+}
+
+.theme-toggle {
+  padding: 0.1rem 0.5rem;
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--muted);
+  color: var(--fg);
+}
+
+@media (min-width: 66em) {
+  .site-nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
+  }
+}
+
+/* Text ------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 2.5rem 0 0.75rem;
+  line-height: 1.25;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--fg);
+}
+
+blockquote {
+  margin: 1.75rem 0;
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  border-left: 3px solid var(--moss);
+  color: var(--muted);
+}
+
+hr {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* Media and embeds ------------------------------------------------------- */
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+/* Tables ----------------------------------------------------------------- */
+
+table {
+  display: block;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.35rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Code and math ---------------------------------------------------------- */
+
+code,
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+:not(pre) > code {
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  background: var(--surface);
+}
+
+pre {
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  line-height: 1.5;
+}
+
+pre code {
+  font-size: inherit;
+}
+
+/* Long display equations scroll instead of overflowing the page. */
+mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Page parts ------------------------------------------------------------- */
+
+.page-header {
+  margin-bottom: 2.25rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.4rem;
+}
+
+.lede {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Small print: dates, labels, the post navigation. */
+.meta,
+.post-nav,
+.entry-list time {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.meta {
+  margin: 0;
+}
+
+.post-nav {
+  margin-top: 3.5rem;
+}
+
+/* Lists of posts and projects. */
+.entry-list {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entry-list li {
+  padding: 0.55rem 0;
+}
+
+.entry-list time {
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-list a {
+  font-size: 1.1rem;
+}
+
+.entry-description {
+  display: block;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Classes for use in Markdown, e.g. ![…](…){.portrait} or ::: centered */
+
+.portrait {
+  float: right;
+  width: 40%;
+  max-width: 15rem;
+  margin: 0.35rem 0 1rem 1.75rem;
+  border-radius: 6px;
+}
+
+.float-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+/* Site footer ------------------------------------------------------------ */
+
+.site-footer {
+  clear: both;
+  margin-top: 4.5rem;
+  padding: 1.25rem 0 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.site-footer p {
+  margin: 0.6rem 0 0;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+.site-footer a:hover {
+  color: var(--fg);
+}
+
+/* Print: just the text. -------------------------------------------------- */
+
+@media print {
+  html {
+    background: none;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  body {
+    display: block;
+    padding: 0;
+  }
+
+  .site-nav,
+  .theme-toggle,
+  .post-nav,
+  .site-footer nav {
+    display: none;
+  }
+
+  a {
+    color: inherit;
+  }
+}
