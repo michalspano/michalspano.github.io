@@ -8,7 +8,7 @@ PORT  ?= 8000
 SITE = $(shell $(CABAL) list-bin exe:site)
 
 .DEFAULT_GOAL := build
-.PHONY: help deps generator build watch check post lint freeze clean distclean
+.PHONY: help deps generator build watch check post lint bump clean distclean
 
 help: ## List the available targets
 	@awk 'BEGIN { FS = ":.*## " } /^[a-z-]+:.*## / { printf "  %-10s %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
@@ -35,9 +35,10 @@ post: ## Start a new post: make post TITLE="My new post"
 lint: ## Lint the Haskell sources with HLint
 	hlint app src
 
-freeze: ## Re-resolve dependencies and pin them in cabal.project.freeze
-	rm -f cabal.project.freeze
-	$(CABAL) freeze
+bump: ## Move the pinned Hackage snapshot (cabal.project) to now; then run `make deps`
+	$(CABAL) update
+	sed -i.bak -E "s/^index-state: .*/index-state: hackage.haskell.org $$(date -u +%Y-%m-%dT%H:%M:%SZ)/" cabal.project
+	rm -f cabal.project.bak
 
 clean: ## Remove the generated site and Hakyll's cache
 	rm -rf _site _cache

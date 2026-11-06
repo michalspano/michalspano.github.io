@@ -30,7 +30,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ steps.setup.outputs.cabal-store }}
-          key: ${{ runner.os }}-ghc-9.6.7-${{ hashFiles('cabal.project.freeze', '*.cabal') }}
+          key: ${{ runner.os }}-ghc-9.6.7-${{ hashFiles('cabal.project', '*.cabal') }}
           restore-keys: ${{ runner.os }}-ghc-9.6.7-
 
       - name: Build dependencies
