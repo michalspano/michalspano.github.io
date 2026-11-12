@@ -1,4 +1,12 @@
 packages: .
 
--- Exact dependency versions are pinned in cabal.project.freeze
--- (regenerate with `make freeze`).
+-- Dependencies are resolved against Hackage as it was at this moment, so a
+-- build picks the same versions today as in a year. Each platform gets its own
+-- plan from this snapshot: some packages depend on different things on macOS
+-- and Linux, which is why there is no cabal.project.freeze. `make bump` moves
+-- the snapshot to now, to pick up newer dependencies.
+index-state: hackage.haskell.org 2026-05-20T21:05:11Z
+
+-- fsnotify (behind Hakyll's `watch`) before 0.3 dates from 2018 and does not
+-- bound its Linux dependency, hinotify; keep the solver from falling back to it.
+constraints: fsnotify >= 0.3

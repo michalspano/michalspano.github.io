@@ -23,7 +23,7 @@ All commands go through the Makefile:
 | `make post TITLE="…"`       | Start a new blog post                                     |
 | `make lint`                 | Lint the Haskell sources with HLint                       |
 | `make clean` / `distclean`  | Remove build output (`distclean` also the compiled code)  |
-| `make deps` / `freeze`      | Compile / re-pin the Haskell dependencies                 |
+| `make deps` / `bump`        | Compile the Haskell dependencies / move their pinned date  |
 | `make help`                 | List all targets                                          |
 
 ## Writing
