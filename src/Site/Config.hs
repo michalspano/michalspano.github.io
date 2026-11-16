@@ -52,7 +52,7 @@ siteConfig =
         [ Link "Email" "mailto:spano@michalspano.com"
         , Link "LinkedIn" "https://www.linkedin.com/in/michalspano"
         , Link "Twitter" "https://www.twitter.com/michalspano"
-        , Link "Flickr" "https://www.flickr.com/people/197352203@N08"
+        , Link "Flickr" "https://www.flickr.com/photos/michalspano"
         , Link "GitHub" "https://www.github.com/michalspano"
         ]
     , siteAnalyticsId = Just "G-R0D6FNJLTB"

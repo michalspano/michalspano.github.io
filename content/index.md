@@ -24,4 +24,4 @@ Follow my socials to get in touch.
 
 [behance]: https://www.behance.net/michalspano
 [youtube]: https://www.youtube.com/@michalspano
-[flickr]: https://www.flickr.com/people/197352203@N08
+[flickr]: https://www.flickr.com/photos/michalspano
